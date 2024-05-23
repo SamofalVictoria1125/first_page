@@ -8,17 +8,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/TK.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/fontello.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/style.css">
     <Title>@yield('title')</Title>
-    <link rel="stylesheet" href="source_img\Дипломка\meow\styles.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/source_img\Дипломка\meow\styles.css">
+
 </head>
 
 <body style="font-family: 'Inter'">
 
-<img style="padding-bottom: 20px;" src="source_img\Дипломка\meow\img\заставка.png"
+<img style="padding-bottom: 20px;" src="http://127.0.0.1:8000/source_img\Дипломка\meow\img\заставка.png"
      class="img-fluid" alt="Ошибка">
 
 <div style="margin-right: 20px; margin-left: 20px;">
@@ -132,42 +132,15 @@
         <div class="col-auto"> <a href="C:\Users\tetra\OneDrive\Рабочий стол\prop\korz.html"
                                   class="btn  col-4 material-icons" style="font-size: 30px;" role="button">add_shopping_cart</a>
         </div>
-        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto"> <button
-                class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</button></div>
+        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto">
+            <a href="{{ route('account') }}" class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</a></div>
     </div>
 </div>
 </div>
 
-<div class="row justify-content-center"
-     style="font-weight: bold; padding-bottom: 30px; padding-top: 30px; text-align: center;">
 
-    <div class="col-auto">
-        <u>
-            Все акции
-        </u>
-    </div>
-    <div class="col-auto">
-        Новости
-    </div>
-    <div class="col-auto">
-        Успей купить
-    </div>
-    <div class="col-auto">
-        Бонусная карта
-    </div>
-    <div class="col-auto">
-        Команда компании
-    </div>
-    <div class="col-auto">
-        Скидки, кредиты и рассрочки
-    </div>
-    <div class="col-auto">
-        Политика конфиденциальности
-    </div>
 
-</div>
-
-<div class="row justify-content-between" style="padding-top: 40px; object-fit: cover;">
+<div class="row justify-content-between" style="padding-top: 40px; object-fit: cover;padding-bottom: 60px">
     <div id="carouselExampleControls" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <div style="margin-top: 100px;" class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -177,17 +150,17 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img style="padding-left: 25px;"
-                     src="source_img\Техника\d.png" class="d-block w-100"
+                     src="http://127.0.0.1:8000/source_img\Техника\d.png" class="d-block w-100"
                      alt="Произошла ошибка">
             </div>
             <div class="carousel-item">
                 <img style="padding-left: 25px;"
-                     src="source_img\Техника\n.png" class="d-block w-100"
+                     src="http://127.0.0.1:8000/source_img\Техника\n.png" class="d-block w-100"
                      alt="Произошла ошибка">
             </div>
             <div class="carousel-item">
                 <img style="padding-left: 25px;"
-                     src="source_img\Техника\lol.png"
+                     src="http://127.0.0.1:8000/source_img\Техника\lol.png"
                      class="d-block w-100" alt="Произошла ошибка">
             </div>
         </div>
@@ -204,6 +177,7 @@
     </div>
 </div>
 </div>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 @yield('content')
 </html>

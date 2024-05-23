@@ -18,4 +18,10 @@ class MainController extends Controller
         return view('cataloge');
     }
 
+    public function account1(){
+        return view('account1');
+    }
+
+
+
 }

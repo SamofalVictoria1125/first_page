@@ -15,7 +15,6 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'providers' => [Intervention\Image\ImageServiceProvider::class,],
 
     /*
     |--------------------------------------------------------------------------
@@ -131,5 +130,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
     ],
+
+
 
 ];

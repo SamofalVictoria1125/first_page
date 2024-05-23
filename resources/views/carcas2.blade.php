@@ -8,17 +8,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/TK.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/fontello.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/style.css">
     <Title>@yield('title')</Title>
-    <link rel="stylesheet" href="D:\laravel\source\Дипломка\meow\styles.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/source_img\Дипломка\meow\styles.css">
 </head>
 
 <body style="font-family: 'Inter'">
 
-<img style="padding-bottom: 20px;" src="source_img\Дипломка\meow\img\заставка.png"
+<img style="padding-bottom: 20px;" src="http://127.0.0.1:8000/source_img\Дипломка\meow\img\заставка.png"
      class="img-fluid" alt="Ошибка">
 
 <div style="margin-right: 20px; margin-left: 20px;">

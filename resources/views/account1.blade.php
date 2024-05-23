@@ -14,25 +14,10 @@
     <link rel="stylesheet" href="source_img\Дипломка\meow\styles.css"></head>
 <body style="padding-left: 20px">
 
-@if($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach($errors->all() as $error)
+@include('messages')
 
-                <li>
-                    {{ $error }}
-                </li>
-
-            @endforeach
-        </ul>
-    </div>
-
-@endif
-
-<form action="/account/submit" method="post">
-    @csrf
-<div class="form-control">
-    <legend>Регистрация аккаунта</legend>
+<div class="form-group">
+    <legend>Авторизация</legend>
     <div class="col-2">
         <label for="name" class="form-label">ФИО клиента</label>
         <input class="form-control" type="text" id="name" name="name">
@@ -47,13 +32,12 @@
     </div>
 
     <div style="padding-top: 20px">
-        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+        <button type="submit" class="btn btn-primary">Авторизироваться</button>
     </div>
     <div style="padding-top: 20px">
-        <button href="{{ route('account1') }}" type="button" class="btn btn-secondary">Вернуться</button>
+        <a href="{{ route('account') }}" type="button" class="btn btn-secondary">Зарегистрироваться</a>
     </div>
 </div>
-</form>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>

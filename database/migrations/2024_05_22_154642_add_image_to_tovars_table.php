@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tovaris', function (Blueprint $table) {
-            $table->id();
-            $table->string('Name');
-            $table->string('Info');
-            $table->string('Cost');
+        Schema::table('tovars', function (Blueprint $table) {
             $table->string('image');
-            $table->string('Firm');
-            $table->timestamps();
         });
     }
 
@@ -27,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tovaris');
+        Schema::table('tovars', function (Blueprint $table) {
+            $table->dropColumn('image');
+        });
     }
 };

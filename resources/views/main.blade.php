@@ -8,12 +8,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/TK.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/fontello.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <Title>Технотек</Title>
-    <link rel="stylesheet" href="D:\laravel\source\Дипломка\meow\styles.css">
+    <link rel="stylesheet" href="{{asset('/source_img/Дипломка/meow/styles.css')}}">
 </head>
 
 <body style="font-family: 'Inter'">
@@ -52,7 +51,7 @@
             </div>
             <div class="col-auto">
                 <a style="color: red;" role="button"
-                   href="D:\laravel\source\prop\pages\Act.html" class="btn">
+                   href="..." class="btn">
                     8-800-990-45-67
                 </a>
             </div>
@@ -63,7 +62,8 @@
 
     <div class="row justify-content-between" style="padding-top: 40px; margin-left: 20px;">
         <div class="col-2">
-            <a class="btn btn-lg dropdown-toggle" href="#" id="navbarDropdown" style="background-color: #5F3683; color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <a href="{{ route('cataloge-all') }}" class="btn btn-lg dropdown-toggle" href="#" id="navbarDropdown" style="background-color: #5F3683; color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Каталог товаров
             </a>
             <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="
@@ -129,14 +129,14 @@
                    aria-label="Search">
         </div>
         <div class="col-auto">
-            <a href="C:\Users\tetra\OneDrive\Рабочий стол\prop\fav.html" class="btn  col-4 material-icons"
+            <a href="{{ route('fav') }}" class="btn  col-4 material-icons"
                style="font-size: 30px;" role="button">favorite_border</a>
         </div>
         <div class="col-auto"> <a href="C:\Users\tetra\OneDrive\Рабочий стол\prop\korz.html"
                                   class="btn  col-4 material-icons" style="font-size: 30px;" role="button">add_shopping_cart</a>
         </div>
-        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto"> <button
-                class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</button></div>
+        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto"> <a href="{{ route('account') }}"
+                class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</a></div>
     </div>
 </div>
 </div>
@@ -146,7 +146,7 @@
 
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade"  aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -235,35 +235,6 @@
         </div>
     </div>
 
-
-    <div class="row justify-content-center"
-         style="font-weight: bold; padding-bottom: 30px; padding-top: 30px; text-align: center;">
-
-        <div class="col-auto">
-            <u>
-                Все акции
-            </u>
-        </div>
-        <div class="col-auto">
-            Новости
-        </div>
-        <div class="col-auto">
-            Успей купить
-        </div>
-        <div class="col-auto">
-            Бонусная карта
-        </div>
-        <div class="col-auto">
-            Команда компании
-        </div>
-        <div class="col-auto">
-            Скидки, кредиты и рассрочки
-        </div>
-        <div class="col-auto">
-            Политика конфиденциальности
-        </div>
-
-    </div>
 
     <div class="row justify-content-between" style="padding-top: 40px; object-fit: cover;">
         <div id="carouselExampleControls" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
@@ -718,7 +689,9 @@
 </div>
 
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+
+
 </body>
 
 </html>

@@ -4,11 +4,78 @@ namespace App\Http\Controllers;
 
 use App\Models\Tovaris;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
+use App\Http\Requests\TovarRequest;
+use App\Models\Tovar;
+use App\Http\Requests\FilterRequest;
+
 
 class TovarisController extends Controller
 {
+
+    public function submit(TovarRequest $req){
+     //$validation = $req->validate([
+       //'name' => 'required|min:5|max:12',
+         //'info' => 'required|min:10|max:60',
+         //'firma' => 'required|max:20'
+     //]);
+
+        $tovar = new Tovar();
+        $tovar->name = $req->input('name');
+        $tovar->info = $req->input('info');
+        $tovar->firm = $req->input('firm');
+        $tovar->image = '/storage/'.$tovar;
+
+
+
+        $tovar->save();
+
+        return redirect()->route('cataloge')->with('success', 'Товар был успешно добавлен');
+    }
+
+    public function AllData(){
+        $tovar = new Tovar();
+        return view('tovarses', ['data' => $tovar->orderBy('id')->get()]);
+    }
+
+    public function ShowOneTovar(Tovar $tovar){
+
+        return view('one-tovar', ['data' => $tovar]);
+    }
+
+    public function UpdateTovar($id){
+        $tovar = Tovar::find($id);
+        return view('update-tovar', ['data' => $tovar]);
+    }
+
+    public function UpdateTovarSubmit($id, TovarRequest $req){
+
+
+        $tovar = Tovar::find($id);
+        $tovar->name = $req->input('name');
+        $tovar->info = $req->input('info');
+        $tovar->firm = $req->input('firm');
+
+        $tovar->save();
+
+        return redirect()->route('cataloge-all', $id)->with('success', 'Товар был успешно обновлен');
+    }
+
+    public function DeleteTovar($id){
+        Tovar::find($id)->delete();
+
+        return redirect()->route('cataloge-all', $id)->with('success', 'Товар был успешно удален');
+    }
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      */
@@ -22,29 +89,13 @@ class TovarisController extends Controller
      */
     public function create()
     {
-        return view('tovaris.create');
+
     }
 
     public function store(Request $request)
     {
 
-        $data = $request->all();
 
-        $filename    = $data['image']->getClientOriginalName();
-
-        //Сохраняем оригинальную картинку
-        $data['image']->move(Storage::path('/public/image/source_img/').'origin/',$filename);
-
-        //Создаем миниатюру изображения и сохраняем ее
-        $thumbnail = Image::make(Storage::path('/public/source_img/news/').'origin/'.$filename);
-        $thumbnail->fit(300, 300);
-        $thumbnail->save(Storage::path('/public/image/source_img/').'thumbnail/'.$filename);
-
-        //Сохраняем новость в БД
-        $data['image'] = $filename;
-        Tovaris::create($data);
-
-        return redirect()->route('cataloge');
     }
 
     /**
