@@ -12,6 +12,8 @@ class AccountController extends Controller
     public function submit(AccountRequest $req){
 
 
+
+
         $account = new Account();
         $account->name = $req->input('name');
         $account->email = $req->input('email');

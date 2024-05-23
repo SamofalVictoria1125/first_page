@@ -6,7 +6,7 @@
     <div style="padding-left: 40px">
     <div class="row justify-content-start fw-bold" style="font-size: 50px; padding-top: 50px; padding-bottom: 70px;">
         <div class="col-auto">Список всех</div>
-        <div class="col-auto" style="color: red;">ТОВАРОВ</div>
+        <div class="col" style="color: red;">ТОВАРОВ</div>
     </div>
     @foreach($data as $el)
         <div class="card" style="width: 40rem;">

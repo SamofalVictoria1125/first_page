@@ -22,6 +22,12 @@ class MainController extends Controller
         return view('account1');
     }
 
+    public function main_auth(){
+        return view('main_auth');
+    }
+
+
+
 
 
 }

@@ -6,12 +6,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/TK.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/fontello.css">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/style.css">
+    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/fontello.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <Title>Технотек</Title>
-    <link rel="stylesheet" href="http://127.0.0.1:8000/source_img\Дипломка\meow\styles.css"></head>
+    <link rel="stylesheet" href="{{asset('/source_img/Дипломка/meow/styles.css')}}"></head>
 <body style="padding-left: 20px">
 
 @include('messages')
@@ -41,7 +40,7 @@
 
 </form>
 </div>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 </body>
 
 

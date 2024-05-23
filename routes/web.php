@@ -5,6 +5,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Controllers;
+
 
 
 Route::get('/', function () {
@@ -29,7 +31,11 @@ Route::post('/cataloge/all/{id}/update', [\App\Http\Controllers\TovarisControlle
 //account
 Route::post('/account/submit', [\App\Http\Controllers\AccountController::class, 'submit'])->name('account-submit');
 Route::get('/account', [\App\Http\Controllers\MainController::class, 'account'])->name('account');
-Route::get('/account1', [\App\Http\Controllers\MainController::class, 'account1'])->name('account1');
+Route::get('/account1', [\App\Http\Controllers\MainController::class, 'account1'])->name('account_two');
+
+
+
+Route::get('/main_auth', [\App\Http\Controllers\MainController::class, 'main_auth'])->name('main_auth');
 
 
 
@@ -38,4 +44,8 @@ Route::get('/account1', [\App\Http\Controllers\MainController::class, 'account1'
 
 Route::get('/fav', [\App\Http\Controllers\MainController::class, 'like'])->name('fav');
 
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 

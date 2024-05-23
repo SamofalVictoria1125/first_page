@@ -19,7 +19,7 @@
 <form action="/cataloge/submit" method="post" style="padding-top: 50px" enctype="multipart/form-data">
  @csrf
     <div class="form-group">
-        <legend>Заполнение формы товара</legend>
+
         <div class="col-2">
             <label for="name" class="form-label">Наименование товара</label>
             <input class="form-control" type="text" id="name" name="name">
@@ -33,9 +33,15 @@
             <textarea class="form-control" type="text" id="info" name="info"></textarea>
         </div>
 
-        <div class="form-group" style="padding-bottom: 20px; padding-top: 20px">
-            <input type="file" class="form-control-file" id="image" name="image">
+        <div style="width: 500px;padding-top: 20px" class="input-group">
+           <span class="input-group-btn">
+             <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+               <i class="fa fa-picture-o"></i> Choose
+             </a>
+             </span>
+            <input id="thumbnail" class="form-control" type="text" name="filepath">
         </div>
+        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
 
 
         <div class="col-2">
@@ -48,7 +54,10 @@
 
 </form>
 </div>
+<script src="{{asset('js/jquery-3.7.1.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script>$('#lfm').filemanager('image');</script>
 </body>
 
 

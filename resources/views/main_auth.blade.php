@@ -60,9 +60,9 @@
     <div class="row justify-content-between" style="padding-top: 40px; margin-left: 20px;">
         <div class="col-2">
 
-            <button class="btn btn-lg dropdown-toggle" href="#" id="navbarDropdown" style="background-color: #5F3683; color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="{{ route('cataloge-all') }}" class="btn btn-lg dropdown-toggle" href="#" id="navbarDropdown" style="background-color: #5F3683; color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Каталог товаров
-            </button>
+            </a>
             <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="
                       border-top-left-radius: 0;
                       border-top-right-radius: 0;
@@ -72,38 +72,44 @@
                         <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                             <div class="list-group list-group-flush">
                                 <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                                    Бытовая  техника
+                                    Lorem ipsum
                                 </p>
-                                <a href="" class="list-group-item list-group-item-action">Встраиваемая техника</a>
-                                <a href="" class="list-group-item list-group-item-action">Техника для кухни</a>
-                                <a href="" class="list-group-item list-group-item-action">Техника для дома</a>
+                                <a href="" class="list-group-item list-group-item-action">Бытовая техника</a>
+                                <a href="" class="list-group-item list-group-item-action">Красота и здоровье</a>
+                                <a href="" class="list-group-item list-group-item-action">Смартфоны и техника</a>
+                                <a href="" class="list-group-item list-group-item-action">Офис и мебель</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                             <div class="list-group list-group-flush">
                                 <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                                    Красота и здоровье
+                                    Explicabo voluptas
                                 </p>
-                                <a href="" class="list-group-item list-group-item-action">Укладка и сушка волос</a>
-                                <a href="" class="list-group-item list-group-item-action">Уход за полостью рта</a>
-                                <a href="" class="list-group-item list-group-item-action">Уход за телом</a>
+                                <a href="" class="list-group-item list-group-item-action">Сетевое оборудование</a>
+                                <a href="" class="list-group-item list-group-item-action">ПК и ноутбуки</a>
+                                <a href="" class="list-group-item list-group-item-action">Отдых и развлечения</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                             <div class="list-group list-group-flush">
                                 <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                                    Смартфоны и фототехника
+                                    Iste quaerato
                                 </p>
-                                <a href="" class="list-group-item list-group-item-action">Смартфоны</a>
-                                <a href="" class="list-group-item list-group-item-action">Планшеты</a>
-                                <a href="" class="list-group-item list-group-item-action">Фотоаппараты</a>
+                                <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                                <a href="" class="list-group-item list-group-item-action">Est iure</a>
+                                <a href="" class="list-group-item list-group-item-action">Praesentium</a>
+                                <a href="" class="list-group-item list-group-item-action">Laboriosam</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="list-group list-group-flush">
-                                <a href="{{ route('cataloge-all') }}" class="mb-0 list-group-item text-uppercase font-weight-bold">
-                                    ВЕСЬ КАТАЛОГ →
-                                </a>
+                                <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                                    Cras justo odio
+                                </p>
+                                <a href="" class="list-group-item list-group-item-action">Saepe</a>
+                                <a href="" class="list-group-item list-group-item-action">Vel alias</a>
+                                <a href="" class="list-group-item list-group-item-action">Sunt doloribus</a>
+                                <a href="" class="list-group-item list-group-item-action">Cum dolores</a>
                             </div>
                         </div>
                     </div>
@@ -126,10 +132,29 @@
         <div class="col-auto"> <a href="C:\Users\tetra\OneDrive\Рабочий стол\prop\korz.html"
                                   class="btn  col-4 material-icons" style="font-size: 30px;" role="button">add_shopping_cart</a>
         </div>
-        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto"> <a href="{{ route('account_two') }}"
-                class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</a></div>
+        <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto"> <button data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</button></div>
     </div>
 </div>
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            </div>
+            <div class="modal-body">
+                Вы уверены, что хотите выйти из аккаунта?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{{ route('main') }}" type="button" class="btn btn-primary">Выйти</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 

@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/TK.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/fontello.css">
-    <link rel="stylesheet" href="http://127.0.0.1:8000/css/style.css">
+    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/fontello.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <Title>@yield('title')</Title>
-    <link rel="stylesheet" href="http://127.0.0.1:8000/source_img\Дипломка\meow\styles.css">
+    <link rel="stylesheet" href="{{asset('/source_img/Дипломка/meow/styles.css')}}">
 
 </head>
 
@@ -50,11 +50,8 @@
                     Юридическим лицам
                 </a>
             </div>
-            <div class="col-auto">
-                <a style="color: red;" role="button"
-                   href="D:\laravel\source\prop\pages\Act.html" class="btn">
-                    8-800-990-45-67
-                </a>
+            <div class="col-auto" style="color: red;">
+                8-800-990-45-64
             </div>
         </div>
     </nav>
@@ -133,7 +130,7 @@
                                   class="btn  col-4 material-icons" style="font-size: 30px;" role="button">add_shopping_cart</a>
         </div>
         <div data-bs-target="#exampleModal"  data-bs-toggle="modal" class="col-auto">
-            <a href="{{ route('account') }}" class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</a></div>
+            <a href="{{ route('account_two') }}" class="btn col-sm col-2 material-icons " style="font-size: 30px;" role="button">account_circle</a></div>
     </div>
 </div>
 </div>
@@ -177,7 +174,7 @@
     </div>
 </div>
 </div>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 </body>
 @yield('content')
 </html>

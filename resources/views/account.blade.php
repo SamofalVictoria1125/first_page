@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head><meta charset="utf-8">
     <meta http-equiv="X-UA-Compalible" content="IE=edge">
     <link href="https://fonts.googleapis.com/icon?family=Inter" rel="stylesheet">
@@ -11,8 +12,13 @@
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <Title>Технотек</Title>
-    <link rel="stylesheet" href="source_img\Дипломка\meow\styles.css"></head>
-<body style="padding-left: 20px">
+    <link rel="stylesheet" href="source_img\Дипломка\meow\styles.css">
+</head>
+<?php
+$imgPath = 'https://img.freepik.com/free-photo/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper_1258-99284.jpg?t=st=1716471174~exp=1716474774~hmac=87936da459beb4bb2d320d96a335d87d3e004af933d6b56e0a0c8d8da9404286&w=1800';
+?>
+
+<body style="padding-left: 20px;background-image: url('<?=$imgPath?>;')">
 
 @if($errors->any())
     <div class="alert alert-danger">
@@ -28,33 +34,36 @@
     </div>
 
 @endif
-
+<div style="padding-top: 100px">
 <form action="/account/submit" method="post">
     @csrf
-<div class="form-control">
-    <legend>Регистрация аккаунта</legend>
-    <div class="col-2">
+<div class="form-control" style="width: 500px;border-radius: 8px">
+    <legend style="text-align: center;padding-top: 30px;padding-bottom: 70px">Регистрация аккаунта</legend>
+    <div class="" style="text-align: center">
         <label for="name" class="form-label">ФИО клиента</label>
         <input class="form-control" type="text" id="name" name="name">
     </div>
-    <div class="col-2">
+    <div class="" style="text-align: center">
         <label for="email" class="form-label">Логин</label>
         <input class="form-control" type="text" id="email" name="email">
     </div>
-    <div class="col-2">
+    <div class="" style="text-align: center">
         <label for="password" class="form-label">Пароль</label>
         <input class="form-control" type="password" id="password" name="password">
     </div>
 
-    <div style="padding-top: 20px">
-        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
-    </div>
-    <div style="padding-top: 20px">
-        <button href="{{ route('account1') }}" type="button" class="btn btn-secondary">Вернуться</button>
+    <div style="padding-top: 70px;text-align: center">
+        <div style="padding-bottom: 20px">
+        <button type="submit" style="background-color: #5F3683; border-color: #5F3683" class="btn btn-primary">Зарегистрироваться</button>
+        </div>
+        <div style="padding-bottom: 30px">
+        <a href="{{ route('account_two') }}" type="button" class="btn btn-secondary">Вернуться</a>
+        </div>
     </div>
 </div>
 </form>
+</div>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
